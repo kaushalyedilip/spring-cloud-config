@@ -1,0 +1,24 @@
+
+server:
+  port: 4045
+spring:
+  application:
+    name: review-service
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+logging:
+  level:
+    '[org.springframework.cloud.netflix.eureka]': trace
+
+
+spring.datasource.url: jdbc:h2:mem:testdb
+spring.datasource.driverClassName: org.h2.Driver
+spring.datasource.username: sa
+springspring.datasource.password:
+spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
